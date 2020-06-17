@@ -1,7 +1,6 @@
 package com.smart.rabbitmq.service;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: CacheService

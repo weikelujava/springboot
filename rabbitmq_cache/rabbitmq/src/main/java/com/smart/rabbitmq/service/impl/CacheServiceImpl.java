@@ -15,7 +15,6 @@ import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: CacheServiceImpl
