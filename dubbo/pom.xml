@@ -17,11 +17,8 @@
 
     <properties>
         <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
-        <junit.version>4.12</junit.version>
-        <zookeeper.version>3.6.0</zookeeper.version>
-        <dubbo.version>2.7.3</dubbo.version>
-        <curator.version>2.12.0</curator.version>
-        <zkclient.version>0.10</zkclient.version>
+        <dubbo.spring.boot.starter.actuator.version>2.7.7</dubbo.spring.boot.starter.actuator.version>
+        <dubbo.spring.boot.startor.version>2.7.3</dubbo.spring.boot.startor.version>
     </properties>
 
     <dependencyManagement>
@@ -37,36 +34,24 @@
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
+            <!--状态检查依赖-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-actuator</artifactId>
+                <version>${dubbo.spring.boot.starter.actuator.version}</version>
+            </dependency>
 
+            <!-- Dubbo Spring Boot dependencies -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${dubbo.version}</version>
+                <version>${dubbo.spring.boot.startor.version}</version>
             </dependency>
+
             <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-recipes</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-client</artifactId>
-                <version>4.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.zookeeper</groupId>
-                <artifactId>zookeeper</artifactId>
-                <version>${zookeeper.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.101tec</groupId>
-                <artifactId>zkclient</artifactId>
-                <version>${zkclient.version}</version>
+                <groupId>org.example</groupId>
+                <artifactId>dubbo-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
 
         </dependencies>

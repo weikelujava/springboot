@@ -1,10 +1,11 @@
 package com.smart.consumer.controller;
 
-import com.smart.common.service.TestService;
+import com.smart.common.service.DemoService;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * All rights Reserved, Designed By http://www.hollysmart.com.cn
@@ -19,13 +20,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Reference(version = "1.0.0")
-    private TestService testService;
+    @Reference(version = "${demo.service.version}",url = "${demo.service.ulr}")
+    private DemoService demoService;
 
 
     @GetMapping("/find")
     public String find(){
 
-        return testService.find();
+        return demoService.sayHello();
     }
 }

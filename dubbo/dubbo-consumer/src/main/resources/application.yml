@@ -6,14 +6,20 @@ spring:
 server:
   port: 9001
 
-dubbo:
-  application:
-    name: dubbo_consumer
-    id: dubbo_consumer
-  protocol:
-    id: dubbo
-    name: dubbo
-    port: 20880
-  registry:
-    protocol: zookeeper
-    address: 'zookeeper://127.0.0.1:2181'
+#dubbo:
+#  application:
+#    name: dubbo_consumer
+#    id: dubbo_consumer
+#  protocol:
+#    id: dubbo
+#    name: dubbo
+#    port: 20880
+#  registry:
+#    protocol: zookeeper
+#    address: 'zookeeper://127.0.0.1:2181'
+
+
+demo:
+  service:
+    version: 1.0.0
+    url: dubbo://127.0.0.1:23456

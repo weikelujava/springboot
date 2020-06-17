@@ -14,9 +14,11 @@ dubbo:
     address: 'zookeeper://127.0.0.1:2181'
   protocol:
     name: dubbo
-    port: 20880
+    port: 23456
   #扫描注解包通过该设置将服务注册到zookeeper
   scan:
     base-packages: com.smart.provider.service
-server:
-  port: 8001
+
+demo:
+  service:
+    version: 1.0.0
