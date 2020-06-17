@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="rabbitmq" />
         <module name="dubbo-common" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
@@ -19,6 +20,8 @@
       <module name="dubbo_common" target="1.5" />
       <module name="dubbo_consumer" target="1.5" />
       <module name="dubbo_provider" target="6" />
+      <module name="rabbitmq" target="6" />
+      <module name="rabbitmq_cache" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

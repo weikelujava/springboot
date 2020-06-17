@@ -1,0 +1,41 @@
+
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+
+  # Redis config
+  redis:
+    # IP
+    host: 127.0.0.1
+    # Port
+    port: 6379
+    # lettuce连接池，性能忧
+    lettuce:
+      pool:
+        # 连接池最大连接数(使用负值表示没有限制) 默认8
+        max-active: 8
+        # 连接池最大阻塞等待时间(使用负值标识没有限制)  默认-1
+        max-wait: -1
+        # 连接池中最大空闲连接 默认8
+        max-idle: 8
+        # 连接池中最小空闲连接 默认0
+        min-idle: 0
+    database: 2
+
+redisson:
+  address: 'redis://127.0.0.1:6379'
+server:
+  port: 1001
+
+
+mq:
+  rabbitmq:
+    fanout:
+      exchange: fanout_exchange_test
+      queue: fanout_queue_test
