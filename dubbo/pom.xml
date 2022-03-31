@@ -16,7 +16,7 @@
     </modules>
 
     <properties>
-        <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
+        <spring.boot.version>2.5.12</spring.boot.version>
         <dubbo.spring.boot.starter.actuator.version>2.7.7</dubbo.spring.boot.starter.actuator.version>
         <dubbo.spring.boot.startor.version>2.7.3</dubbo.spring.boot.startor.version>
     </properties>
